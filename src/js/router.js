@@ -1,25 +1,55 @@
-const route = event => {
-  event = event || window.event;
-  event.preventDefault();
-  window.history.pushState({}, '', event.target.href);
-  handleLocation();
-};
+import home from './views/home.js';
+import details from './views/details.js';
+// import about from './views/about.js';
+// import contact from './views/contact.js';
 
 const routes = {
-  404: '/pages/404.html',
-  '/': '/pages/index.html',
-  '/about': '/pages/about.html',
-  '/lorem': '/pages/lorem.html',
+  '/': { title: 'Home', render: home },
+  '#details': { title: 'details', render: details },
+  // '/about': { title: 'About', render: about },
+  // '/contact': { title: 'Contact', render: contact },
 };
 
-const handleLocation = async () => {
-  const path = window.location.pathname;
-  const route = routes[path] || routes[404];
-  const html = await fetch(route).then(data => data.text());
-  document.getElementById('main-page').innerHTML = html;
-};
+function router() {
+  const view = routes[location.pathname];
+  const hashView = routes[location.hash];
 
-window.onpopstate = handleLocation;
-window.route = route;
+  if (view || hashView) {
+    document.title = view.title;
+    app.innerHTML = view.render();
+    if (hashView?.title === 'details') {
+      app.insertAdjacentHTML('beforeend', hashView.render());
+      return;
+    }
+  } else {
+    history.replaceState('', '', '/');
+    router();
+  }
+}
 
-handleLocation();
+// Handle navigation
+window.addEventListener('click', e => {
+  if (e.target.matches('[data-link]')) {
+    e.preventDefault();
+    history.pushState('', '', e.target.href);
+    router();
+    // return;
+  }
+  if (e.target.matches('[data-details-link]')) {
+    e.preventDefault();
+    console.log(e.target.firstChild);
+    if (!location.hash) {
+      e.target.firstChild.style.transform = 'rotate(0)';
+      history.pushState('', '', '#details');
+      router();
+    } else {
+      e.target.firstChild.style.transform = 'rotate(180deg)';
+      history.pushState('', '', '/');
+      router();
+    }
+  }
+});
+
+// Update router
+window.addEventListener('popstate', router);
+window.addEventListener('DOMContentLoaded', router);

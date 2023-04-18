@@ -6,5 +6,8 @@
 <symbol id="icon-burger" viewBox="0 0 48 32">
 <path d="M0 32h48v-5.334h-48v5.334zM0 18.666h48v-5.332h-48v5.332zM0 0v5.334h48v-5.334h-48z"></path>
 </symbol>
+<symbol id="icon-arrow" viewBox="0 0 32 32">
+<path d="M17.818 30.545v-22.127l10.164 10.164 2.564-2.582-14.545-14.545-14.545 14.545 2.564 2.564 10.164-10.145v22.127h3.636z"></path>
+</symbol>
 </defs>
 </svg>
