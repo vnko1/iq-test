@@ -1,5 +1,6 @@
 import home from './views/home.js';
 import details from './views/details.js';
+import start from './views/start.js';
 // import about from './views/about.js';
 // import contact from './views/contact.js';
 
@@ -8,7 +9,7 @@ const menuEl = document.querySelector('.menu-container');
 const routes = {
   '/': { title: 'Home', render: home },
   '#details': { title: 'details', render: details },
-  // '/about': { title: 'About', render: about },
+  '/start': { title: 'Test', render: start },
   // '/contact': { title: 'Contact', render: contact },
 };
 
@@ -32,11 +33,12 @@ function router() {
   }
 }
 
-// Handle navigation
 window.addEventListener('click', e => {
   if (e.target.matches('[data-link]')) {
     e.preventDefault();
+
     history.pushState('', '', e.target.href);
+
     router();
   }
 
@@ -45,6 +47,7 @@ window.addEventListener('click', e => {
 
     if (!location.hash) {
       history.pushState('', '', '#details');
+
       router();
     } else {
       history.pushState('', '', '/');
@@ -53,6 +56,5 @@ window.addEventListener('click', e => {
   }
 });
 
-// Update router
 window.addEventListener('popstate', router);
 window.addEventListener('DOMContentLoaded', router);

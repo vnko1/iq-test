@@ -6,7 +6,7 @@ export default () => `
       тест на определение <br />
       IQ
     </h1>
-    <a href="/test" data-link class="hero-link">пройти тест</a>
+    <a href="/start" data-link class="hero-link">пройти тест</a>
     <p class="hero-bottom-text">
       <span class="hero-bottom--accent-text"
         >И получите рекомендации по развитию своего интеллекта</span
