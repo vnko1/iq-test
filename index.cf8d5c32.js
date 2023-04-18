@@ -1,0 +1,2 @@
+const t={404:"/pages/404.html","/":"/pages/index.html","/about":"/pages/about.html","/lorem":"/pages/lorem.html"},e=async()=>{const e=window.location.pathname,n=t[e]||t[404],a=await fetch(n).then((t=>t.text()));document.getElementById("main-page").innerHTML=a};window.onpopstate=e,window.route=t=>{(t=t||window.event).preventDefault(),window.history.pushState({},"",t.target.href),e()},e();
+//# sourceMappingURL=index.cf8d5c32.js.map
