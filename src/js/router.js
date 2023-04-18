@@ -2,7 +2,9 @@ import home from './views/home.js';
 import details from './views/details.js';
 // import about from './views/about.js';
 // import contact from './views/contact.js';
+
 const menuEl = document.querySelector('.menu-container');
+
 const routes = {
   '/': { title: 'Home', render: home },
   '#details': { title: 'details', render: details },
@@ -18,6 +20,7 @@ function router() {
     menuEl.classList.remove('is-open');
     document.title = view.title;
     app.innerHTML = view.render();
+
     if (hashView?.title === 'details') {
       menuEl.classList.remove('is-open');
       app.insertAdjacentHTML('beforeend', hashView.render());
@@ -36,6 +39,7 @@ window.addEventListener('click', e => {
     history.pushState('', '', e.target.href);
     router();
   }
+
   if (e.target.matches('[data-details-link]')) {
     e.preventDefault();
 
