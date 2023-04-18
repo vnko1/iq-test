@@ -1,12 +1,12 @@
 export default () => `
-   <section class="hero">
+   <section class="hero" id='hero'>
   <div class="container hero-container">
     <p class="hero-top-text">Пройдите точный и быстрый</p>
     <h1 class="hero-title">
       тест на определение <br />
       IQ
     </h1>
-    <a href="/test" data-link class="route-link">пройти тест</a>
+    <a href="/test" data-link class="hero-link">пройти тест</a>
     <p class="hero-bottom-text">
       <span class="hero-bottom--accent-text"
         >И получите рекомендации по развитию своего интеллекта</span

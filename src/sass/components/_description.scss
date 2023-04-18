@@ -1,0 +1,41 @@
+.description-container {
+  position: relative;
+  padding: 83px 36px 52px;
+  background-image: url('/src/media/image.jpg');
+  background-size: cover;
+}
+
+.description-text {
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('/src/media/down-point.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 24px;
+    top: 43px;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('/src/media/up-point.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 29px;
+    bottom: 32px;
+  }
+}

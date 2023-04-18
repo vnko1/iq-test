@@ -1,0 +1,44 @@
+.advice-container {
+  padding: 38px 11px 40px;
+  background-image: url('/src/media/brain.png');
+  background-repeat: no-repeat;
+  background-size: 232px 180px;
+  background-position: 50% 75%;
+  background-color: #fff;
+}
+.advice-text {
+  margin-bottom: 209px;
+  font-family: 'PT Serif';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: #272727;
+  & > span {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .inner-text {
+    text-transform: lowercase;
+  }
+}
+
+.advice-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 189px;
+  height: 41px;
+  margin: 0 auto;
+  background: radial-gradient(50% 50% at 50% 50%, #ffc700 0%, #ffc700 100%);
+  border-radius: 20px;
+  font-family: 'Merriweather';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #0d0c11;
+}

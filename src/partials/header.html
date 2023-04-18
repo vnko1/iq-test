@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="container">
+  <div class="container header-container">
     <button type="button" class="header-button">
       <svg width="24" height="16">
         <use href="/src/media/sprite.svg#icon-burger"></use>
@@ -8,13 +8,15 @@
     <nav class="header-navigation">
       <ul class="header-list">
         <li class="header-item">
-          <a class="header-link nav-link" href="#">Главная</a>
+          <a class="header-link nav-link" href="/" data-link>Главная</a>
         </li>
         <li class="header-item">
-          <a class="header-link nav-link" href="#">Информация о тесте</a>
+          <a class="header-link nav-link" href="#details" data-link
+            >Информация о тесте</a
+          >
         </li>
         <li class="header-item">
-          <a class="header-link nav-link" href="#">пройти тест</a>
+          <a class="header-link nav-link" href="/test" data-link>пройти тест</a>
         </li>
       </ul>
     </nav>

@@ -38,11 +38,13 @@
   color: #ffc700;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.route-link {
+.hero-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 13px 17px 10px;
+  width: 189px;
+  height: 41px;
+  margin: 0 auto;
   margin-bottom: 22px;
   background: radial-gradient(50% 50% at 50% 50%, #ffc700 0%, #ffc700 100%);
   border-radius: 20px;
