@@ -33,17 +33,14 @@ window.addEventListener('click', e => {
     e.preventDefault();
     history.pushState('', '', e.target.href);
     router();
-    // return;
   }
   if (e.target.matches('[data-details-link]')) {
     e.preventDefault();
-    console.log(e.target.firstChild);
+
     if (!location.hash) {
-      e.target.firstChild.style.transform = 'rotate(0)';
       history.pushState('', '', '#details');
       router();
     } else {
-      e.target.firstChild.style.transform = 'rotate(180deg)';
       history.pushState('', '', '/');
       router();
     }

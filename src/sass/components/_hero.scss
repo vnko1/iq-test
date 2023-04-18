@@ -102,8 +102,8 @@
   background-image: url('/src/media/arrow.svg');
   background-repeat: no-repeat;
   background-position: center;
-  // transform: rotate(180deg);
-  // transition: transform 250ms linear;
+  transform: rotate(180deg);
+  transition: transform 250ms linear;
 
   &.rotate {
     transform: rotate(0);
