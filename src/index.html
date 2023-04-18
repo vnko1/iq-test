@@ -8,7 +8,16 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!-- <include src="./partials/header.html"></include>
+    <include src="./partials/menu.html"></include> -->
+    <div id="root">
+      <nav id="main-nav" class="sidebar">
+        <a href="/" onclick="route()">Home</a>
+        <a href="/about" onclick="route()">About</a>
+        <a href="/lorem" onclick="route()">Lorem</a>
+      </nav>
+      <div id="main-page"></div>
+    </div>
+    <script src="./js/router.js"></script>
   </body>
 </html>

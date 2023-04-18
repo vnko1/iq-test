@@ -1,0 +1,36 @@
+.header {
+  background-color: #272727;
+}
+
+.header-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17px 0 13px;
+  background-color: transparent;
+  border: none;
+
+  & svg {
+    fill: #696969;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.header-navigation {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.header-list {
+  display: flex;
+  gap: 27px;
+  justify-content: center;
+}
+
+.header-link {
+  display: block;
+  padding: 17px 0 13px;
+}
