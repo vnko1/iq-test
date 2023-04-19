@@ -1,5 +1,7 @@
+import { getRandomHexColor } from '../functions';
 import p8Url from '/src/media/p8-image.jpg';
 import p10Url from '/src/media/p10-image.jpg';
+import p11Url from '/src/media/p11-image.jpg';
 
 const arrOfMark1 = [
   `<label class="form-label-box">
@@ -80,27 +82,33 @@ const arrOfMark2 = [
 
 export default tests = page => {
   let width = 8 * page;
-  if (page === 13) width = 100;
+  if (page === 12) width = 100;
 
-  if (page === 1) return page1(width);
-
-  if (page === 2) return page2(width);
-
-  if (page === 3) return page3(width);
-
-  if (page === 4) return page4(width);
-
-  if (page === 5) return page5(width);
-
-  if (page === 6) return page6(width);
-
-  if (page === 7) return page7(width);
-
-  if (page === 8) return page8(width);
-
-  if (page === 9) return page9(width);
-
-  if (page === 10) return page10(width);
+  switch (page) {
+    case 1:
+      return page1(width);
+    case 2:
+      return page2(width);
+    case 3:
+      return page3(width);
+    case 4:
+      return page4(width);
+    case 5:
+      return page5(width);
+    case 6:
+      return page6(width);
+    case 7:
+      return page7(width);
+    case 8:
+      return page8(width);
+    case 9:
+      return page9(width);
+    case 10:
+      return page10(width);
+    case 11:
+      return page11(width);
+    case 12:
+  }
 };
 
 function page1(width) {
@@ -453,8 +461,86 @@ function page10(width) {
 </section>`;
 }
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+function page11(width) {
+  return `<section class="test">
+  <div class="container test-container">
+    <div class="progress-bar-container">
+      <div class="progress">
+        <div style="width: ${width}%" class="bar"></div>
+      </div>
+    </div>
+    <div class="form-container page11-form">
+      <p class="test-text p11-text">
+        Вставьте подходящее </br>число
+      </p>
+      <img src="${p11Url}" alt="test" width="228" height="207" class="test-image p11-image" />
+      <div class='p11-line'></div>
+      <form class="test-form form">
+        <div class="p11-wrapper">
+          <label class="form-number-label">
+            <input
+              type="radio"
+              text-
+              name="number"
+              value="34"
+              class="form-number-input"
+            />
+            <span class="form-number-text-box">34</span>
+          </label>
+           <label class="form-number-label">
+            <input
+              type="radio"
+              text-
+              name="number"
+              value="36"
+              class="form-number-input"
+            />
+            <span class="form-number-text-box">36</span>
+          </label>
+           <label class="form-number-label">
+            <input
+              type="radio"
+              text-
+              name="number"
+              value="54"
+              class="form-number-input"
+            />
+            <span class="form-number-text-box">54</span>
+          </label>
+           <label class="form-number-label">
+            <input
+              type="radio"
+              text-
+              name="number"
+              value="44"
+              class="form-number-input"
+            />
+            <span class="form-number-text-box">44</span>
+          </label>
+           <label class="form-number-label">
+            <input
+              type="radio"
+              text-
+              name="number"
+              value="66"
+              class="form-number-input"
+            />
+            <span class="form-number-text-box">66</span>
+          </label>
+           <label class="form-number-label">
+            <input
+              type="radio"
+              text-
+              name="number"
+              value="42"
+              class="form-number-input"
+            />
+            <span class="form-number-text-box">42</span>
+          </label>
+        </div>
+      </form>
+    </div>
+    <button type="submit" class="test-button page11-btn" disabled>далее</button>
+  </div>
+</section>`;
 }
