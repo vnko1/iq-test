@@ -1,1 +1,1 @@
-export const test1 = () => `<div>TEST</div>`;
+export const page1 = () => ``;

@@ -1,7 +1,7 @@
 import home from './views/home.js';
 import details from './views/details.js';
 import { headerTest } from './views/headerTest.js';
-import { test1 } from './views/tests.js';
+import { page1 } from './views/tests.js';
 // import about from './views/about.js';
 // import contact from './views/contact.js';
 
@@ -11,19 +11,18 @@ const headerEl = document.getElementById('header-container');
 const routes = {
   '/': { title: 'Home', render: home },
   '#details': { title: 'details', render: details },
-  '/test-1': { title: 'Test', render: test1 },
+  '/test/1': { title: 'Test', render: page1 },
   // '/contact': { title: 'Contact', render: contact },
 };
-
-//  <img src="/src/media/rain_bk3.png" alt="brain" width="48" height="28" />
-//       <p class="header-text">тест на определение IQ</p>
 
 async function router() {
   const view = routes[location.pathname];
   const hashView = routes[location.hash];
   if (location.pathname.includes('test')) {
     headerEl.innerHTML = headerTest();
-  } else headerEl.innerHTML = '';
+  } else {
+    headerEl.innerHTML = '';
+  }
 
   if (view || hashView) {
     menuEl.classList.remove('is-open');

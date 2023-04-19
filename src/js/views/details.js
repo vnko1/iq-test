@@ -13,12 +13,12 @@ export default () => `
     <p class="advice-text">
       Также по результатам теста <span>вы получите</span> подробные
       <span>советы</span> по определению наиболее перспективной
-      <span
+      <spanинтерпретация
         >для вашего типа <span class="inner-text">интеллекта</span> сферы
-        деятельности</span
+        деятельности</spanинтерпретация
       >, которая принесет вам скорейший финансовый результат.
     </p>
-    <a href="/test-1" data-link class="advice-link">пройти тест</a>
+    <a href="/test/1" data-link class="advice-link">пройти тест</a>
   </div>
 </section>
 <section class="timing">
@@ -33,7 +33,7 @@ export default () => `
       позволят вам качественно <span>изменить все аспекты своей жизни:</span> от
       финансового до любовного.
     </p>
-    <a href="/test-1" data-link class="timing-link">пройти тест</a>
+    <a href="/test/1" data-link class="timing-link">пройти тест</a>
     <p class="footer-text"><span>&#169;</span> 2019</p>
   </div>
 </section></div>

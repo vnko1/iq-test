@@ -1,0 +1,19 @@
+.progress-bar-container {
+  //   padding: 0 30px;
+}
+
+.progress {
+  width: 260px;
+  margin: 0 auto;
+  background-color: #f2f3f3;
+  mix-blend-mode: normal;
+  opacity: 0.59;
+  border-radius: 10.5px;
+}
+
+.bar {
+  width: 50%;
+  height: 11px;
+  background: #3bde7c;
+  border-radius: 10.5px;
+}
