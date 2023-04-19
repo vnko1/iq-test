@@ -2,22 +2,62 @@
   <div class="container test-container">
     <div class="progress-bar-container">
       <div class="progress">
-        <div style="width: 20%" class="bar"></div>
+        <div style="width: ${width}%" class="bar"></div>
       </div>
     </div>
-    <div class="form-container page5-form">
+    <div class="form-container page8-form">
+      <p class="test-text">
+        Выберите правильную фигуру из четырёх пронумерованных.
+      </p>
+      <img
+        src="${p8Url}"
+        alt="test"
+        width="185"
+        height="235"
+        class="test-image"
+      />
       <form class="test-form form">
-        <p class="form-text">
-          Выберите цвет, который сейчас наиболее Вам приятен:
-        </p>
-        <div class="input-wrapper">
-          <label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input" />
-            <span class="form-box" style="background-color: aliceblue"></span>
+        <div class="input-numbers-wrapper">
+          <label class="form-number-label">
+            <input
+              type="radio"
+              text-
+              name="number"
+              value="1"
+              class="form-number-input"
+            />
+            <span class="form-number-text-box">1</span>
+          </label>
+          <label class="form-number-label">
+            <input
+              type="radio"
+              name="number"
+              value="2"
+              class="form-number-input"
+            />
+            <span class="form-number-text-box">2</span>
+          </label>
+          <label class="form-number-label">
+            <input
+              type="radio"
+              name="number"
+              value="3"
+              class="form-number-input"
+            />
+            <span class="form-number-text-box">3</span>
+          </label>
+          <label class="form-number-label">
+            <input
+              type="radio"
+              name="number"
+              value="4"
+              class="form-number-input"
+            />
+            <span class="form-number-text-box">4</span>
           </label>
         </div>
       </form>
     </div>
-    <button type="submit" class="test-button page5-btn">далее</button>
+    <button type="submit" class="test-button page8-btn disabled">далее</button>
   </div>
 </section>
