@@ -19,6 +19,8 @@
   // @media screen and (min-width: 1280px) {
   //   width: 1280px;
   // }
+  display: flex;
+  gap: 10px;
 }
 
 .header-button {
@@ -48,4 +50,19 @@
 .header-link {
   display: block;
   padding: 17px 0 13px;
+}
+
+.header-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.header-text {
+  font-family: 'Yeseva One';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffc700;
 }

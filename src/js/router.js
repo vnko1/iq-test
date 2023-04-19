@@ -1,21 +1,29 @@
 import home from './views/home.js';
 import details from './views/details.js';
-import start from './views/start.js';
+import { headerTest } from './views/headerTest.js';
+import { test1 } from './views/tests.js';
 // import about from './views/about.js';
 // import contact from './views/contact.js';
 
 const menuEl = document.querySelector('.menu-container');
+const headerEl = document.getElementById('header-container');
 
 const routes = {
   '/': { title: 'Home', render: home },
   '#details': { title: 'details', render: details },
-  '/start': { title: 'Test', render: start },
+  '/test-1': { title: 'Test', render: test1 },
   // '/contact': { title: 'Contact', render: contact },
 };
+
+//  <img src="/src/media/rain_bk3.png" alt="brain" width="48" height="28" />
+//       <p class="header-text">тест на определение IQ</p>
 
 async function router() {
   const view = routes[location.pathname];
   const hashView = routes[location.hash];
+  if (location.pathname.includes('test')) {
+    headerEl.innerHTML = headerTest();
+  } else headerEl.innerHTML = '';
 
   if (view || hashView) {
     menuEl.classList.remove('is-open');
@@ -30,7 +38,6 @@ async function router() {
 
       setTimeout(() => arrowEl.classList.add('rotate'), 0);
       setTimeout(() => detailsEl.classList.add('animate'), 0);
-      // return;
     }
   } else {
     history.replaceState('', '', '/');
@@ -47,10 +54,8 @@ window.addEventListener('click', e => {
   if (e.target.matches('[data-details-link]')) {
     if (!location.hash) {
       history.pushState('', '', '#details');
-      // router();
     } else {
       history.pushState('', '', '/');
-      // router();
     }
     router();
   }
