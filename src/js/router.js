@@ -13,6 +13,8 @@ const routes = {
   '/': { title: 'Home', render: home },
   '/test/1': { title: 'Test', render: tests },
   '/test/2': { title: 'Test', render: tests },
+  '/test/3': { title: 'Test', render: tests },
+  '/test/4': { title: 'Test', render: tests },
   '#details': { title: 'details', render: details },
   // '/contact': { title: 'Contact', render: contact },
 };
@@ -38,17 +40,13 @@ function router() {
 window.addEventListener('click', e => {
   if (e.target.matches('[data-link]')) {
     e.preventDefault();
-
     history.pushState('', '', e.target.href);
     router();
   }
   if (e.target.matches('[data-details-link]')) {
     e.preventDefault();
-    if (!location.hash) {
-      history.pushState('', '', '#details');
-    } else {
-      history.pushState('', '', '/');
-    }
+    if (!location.hash) history.pushState('', '', '#details');
+    else history.pushState('', '', '/');
     router();
   }
 });
@@ -73,6 +71,7 @@ function renderPage(view, path) {
   app.innerHTML = view.render(page);
   const formEl = document.querySelector('.form');
   testBtn = document.querySelector('.test-button');
+
   if (formEl) {
     formEl.addEventListener('change', onHandleChange);
   }
@@ -93,7 +92,7 @@ function onHandleChange(e) {
   }
 }
 
-function onHandleClick(e) {
+function onHandleClick() {
   const page = parseInt(location.pathname[location.pathname.length - 1]);
   history.pushState('', '', `${location.origin}/test/${page + 1}`);
   router();
