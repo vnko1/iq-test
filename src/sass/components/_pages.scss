@@ -29,3 +29,100 @@
 .page4-btn {
   margin-top: 29px;
 }
+
+.page5-form {
+  margin-top: 28px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.form-label-box {
+  position: relative;
+}
+
+.form-input-box {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.form-box {
+  cursor: pointer;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  background-color: green;
+
+  .form-input-box:checked + & {
+    outline: 6px solid #ffc700;
+  }
+}
+
+.page5-btn {
+  margin-top: 34px;
+}
+
+.page6-form {
+  margin-top: 17px;
+}
+
+.page6-btn {
+  margin-top: 34px;
+}
+
+.page7-form {
+  margin-top: 37px;
+}
+
+.page7-btn {
+  margin-top: 29px;
+}
+
+// .checkbox-label__input {
+//   position: absolute;
+//   white-space: nowrap;
+//   width: 1px;
+//   height: 1px;
+//   overflow: hidden;
+//   border: 0;
+//   padding: 0;
+//   clip: rect(0 0 0 0);
+//   clip-path: inset(50%);
+//   margin: -1px;
+// }
+
+// .checkbox-label__icon {
+//   border: 2px solid color('main-color');
+//   border-radius: 2px;
+//   fill: transparent;
+//   transition: fill $transition-duration-value $timing-function-value,
+//     border-color $transition-duration-value $timing-function-value,
+//     background-color $transition-duration-value $timing-function-value;
+
+//   .checkbox-label__input:checked + & {
+//     fill: color('secondary-color');
+//     border-color: transparent;
+//     background-color: color('accent-color');
+//   }
+
+//   .checkbox-label__input:checked + & {
+//     fill: color('secondary-color');
+//     border-color: transparent;
+//     background-color: color('accent-color');
+//   }
+
+//   .checkbox-label__input:focus + & {
+//     outline: 1px solid color('accent-color');
+//   }
+// }

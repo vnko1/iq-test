@@ -11,12 +11,14 @@ let testBtn = null;
 
 const routes = {
   '/': { title: 'Home', render: home },
+  '#details': { title: 'details', render: details },
   '/test/1': { title: 'Test', render: tests },
   '/test/2': { title: 'Test', render: tests },
   '/test/3': { title: 'Test', render: tests },
   '/test/4': { title: 'Test', render: tests },
-  '#details': { title: 'details', render: details },
-  // '/contact': { title: 'Contact', render: contact },
+  '/test/5': { title: 'Test', render: tests },
+  '/test/6': { title: 'Test', render: tests },
+  '/test/7': { title: 'Test', render: tests },
 };
 
 function router() {
@@ -30,6 +32,7 @@ function router() {
   }
 
   if (view || hashView) {
+    console.log(view);
     renderPage(view, location.pathname);
     if (hashView) renderDetails(hashView);
   } else {
