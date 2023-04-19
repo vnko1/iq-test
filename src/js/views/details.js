@@ -1,5 +1,5 @@
 export default () => `
-<section class="description">
+<div class='details-container'><section class="description">
   <div class="container description-container">
     <p class="description-text">
       Профессиональный IQ-тест позволяет не только определить коэффициент вашего
@@ -36,5 +36,5 @@ export default () => `
     <a href="/start" data-link class="timing-link">пройти тест</a>
     <p class="footer-text"><span>&#169;</span> 2019</p>
   </div>
-</section>
+</section></div>
 `;

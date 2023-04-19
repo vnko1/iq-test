@@ -1,18 +1,8 @@
-.hero {
-  //   padding-top: 27px;
-  //   padding-bottom: 11px;
-  //   background-image: url('/src/media/rain_bk.jpg');
-  //   background-repeat: no-repeat;
-  //   //   background-position: left 0 top;
-  //   background-size: cover;
-}
-
 .hero-container {
   padding-top: 27px;
   padding-bottom: 11px;
   background-image: url('/src/media/rain_bk.jpg');
   background-repeat: no-repeat;
-  //   background-position: 0;
   background-size: cover;
 }
 .hero-top-text {
@@ -23,7 +13,6 @@
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.05em;
-
   color: #ffffff;
 }
 
@@ -48,14 +37,12 @@
   margin-bottom: 22px;
   background: radial-gradient(50% 50% at 50% 50%, #ffc700 0%, #ffc700 100%);
   border-radius: 20px;
-
   font-family: 'Merriweather';
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
   color: #0d0c11;
 }
 .hero-bottom-text {
@@ -66,7 +53,6 @@
   line-height: 19px;
   text-align: center;
   letter-spacing: 0.05em;
-
   color: #ffffff;
 }
 
@@ -106,6 +92,7 @@
   background-position: center;
   transform: rotate(180deg);
   transition: transform 250ms linear;
+  transition-delay: 250ms;
 
   &.rotate {
     transform: rotate(0);

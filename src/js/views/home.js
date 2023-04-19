@@ -14,9 +14,9 @@ export default () => `
       и улучшению финансового благосостояния и личной жизни
     </p>
     <a href="#details" data-details-link class="details-link"
-      ><span class="arrow-container"
+      ><span class="arrow-container" data-details-link
         ></span>
-      <span class="details-link-text">Подробнее</span></a
+      <span class="details-link-text" data-details-link>Подробнее</span></a
     >
   </div>
 </section>

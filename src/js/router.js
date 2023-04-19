@@ -13,7 +13,7 @@ const routes = {
   // '/contact': { title: 'Contact', render: contact },
 };
 
-function router() {
+async function router() {
   const view = routes[location.pathname];
   const hashView = routes[location.hash];
 
@@ -24,9 +24,13 @@ function router() {
 
     if (hashView?.title === 'details') {
       menuEl.classList.remove('is-open');
+      await app.insertAdjacentHTML('beforeend', hashView.render());
+      const arrowEl = document.querySelector('.arrow-container');
+      const detailsEl = document.querySelector('.details-container');
 
-      app.insertAdjacentHTML('beforeend', hashView.render());
-      return;
+      setTimeout(() => arrowEl.classList.add('rotate'), 0);
+      setTimeout(() => detailsEl.classList.add('animate'), 0);
+      // return;
     }
   } else {
     history.replaceState('', '', '/');
@@ -35,25 +39,20 @@ function router() {
 }
 
 window.addEventListener('click', e => {
+  e.preventDefault();
   if (e.target.matches('[data-link]')) {
-    e.preventDefault();
-
     history.pushState('', '', e.target.href);
-
     router();
   }
-
   if (e.target.matches('[data-details-link]')) {
-    e.preventDefault();
-
     if (!location.hash) {
       history.pushState('', '', '#details');
-
-      router();
+      // router();
     } else {
       history.pushState('', '', '/');
-      router();
+      // router();
     }
+    router();
   }
 });
 

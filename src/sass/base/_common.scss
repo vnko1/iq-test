@@ -32,3 +32,12 @@ button {
     color: #f4ce0c;
   }
 }
+
+.details-container {
+  opacity: 0;
+  transition: opacity 500ms linear;
+
+  &.animate {
+    opacity: 1;
+  }
+}
