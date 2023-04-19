@@ -20,6 +20,7 @@ const routes = {
   '/test/9': { title: 'Test', render: tests },
   '/test/10': { title: 'Test', render: tests },
   '/test/11': { title: 'Test', render: tests },
+  '/test/12': { title: 'Test', render: tests },
 };
 
 export { menuEl, headerEl, routes };

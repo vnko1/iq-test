@@ -246,6 +246,38 @@
   margin-top: 30px;
 }
 
+.loader-container {
+  padding-bottom: 190px;
+}
+
+.loader-top-text {
+  max-width: 230px;
+  margin-top: 50px;
+  margin-bottom: 33px;
+  font-family: 'PT Serif';
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+.loader-wrapper {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 27px;
+}
+.loader-bottom-text {
+  max-width: 276px;
+  font-family: 'PT Serif';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-align: justify;
+}
 // .checkbox-label__input {
 //   position: absolute;
 //   white-space: nowrap;
