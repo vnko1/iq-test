@@ -1,63 +1,28 @@
-<section class="test">
-  <div class="container test-container">
-    <div class="progress-bar-container">
-      <div class="progress">
-        <div style="width: ${width}%" class="bar"></div>
-      </div>
-    </div>
-    <div class="form-container page8-form">
-      <p class="test-text">
-        Выберите правильную фигуру из четырёх пронумерованных.
-      </p>
-      <img
-        src="${p8Url}"
-        alt="test"
-        width="185"
-        height="235"
-        class="test-image"
-      />
-      <form class="test-form form">
-        <div class="input-numbers-wrapper">
-          <label class="form-number-label">
-            <input
-              type="radio"
-              text-
-              name="number"
-              value="1"
-              class="form-number-input"
-            />
-            <span class="form-number-text-box">1</span>
-          </label>
-          <label class="form-number-label">
-            <input
-              type="radio"
-              name="number"
-              value="2"
-              class="form-number-input"
-            />
-            <span class="form-number-text-box">2</span>
-          </label>
-          <label class="form-number-label">
-            <input
-              type="radio"
-              name="number"
-              value="3"
-              class="form-number-input"
-            />
-            <span class="form-number-text-box">3</span>
-          </label>
-          <label class="form-number-label">
-            <input
-              type="radio"
-              name="number"
-              value="4"
-              class="form-number-input"
-            />
-            <span class="form-number-text-box">4</span>
-          </label>
-        </div>
-      </form>
-    </div>
-    <button type="submit" class="test-button page8-btn disabled">далее</button>
+<section class="results">
+  <div class="container results-container">
+    <p class="results-top-text">Ваш результат рассчитан:</p>
+    <p class="results-underTop-text">
+      <span>Вы относитесь к 3%</span> респондентов, чей уровень интеллекта более
+      чем на 15 пунктов отличается от среднего в большую или меньшую сторону!
+    </p>
+    <p class="results-middle-text">Скорее получите свой результат!</p>
+    <p class="results-underMiddle-text">
+      В целях защиты персональных данных результат теста, их подробная
+      интерпретация и рекомендации доступны в виде голосового сообщения по
+      звонку с вашего мобильного телефона
+    </p>
+    <p class="results-bottom-text">
+      Звоните скорее, запись доступна всего
+      <span class="timer">10:00</span> минут
+    </p>
+    <a class="results-link" href="tel:+14251234563"
+      ><span class="results-link-text"
+        >позвонить и прослушать результат
+      </span></a
+    >
+    <svg class="results-link-icon" width="30" height="30">
+      <use href="#"></use>
+    </svg>
+    <div class="response-container"></div>
   </div>
 </section>

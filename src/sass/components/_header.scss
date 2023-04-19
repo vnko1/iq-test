@@ -35,28 +35,35 @@
     fill: #696969;
   }
 }
-.header-navigation {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
+// .header-navigation {
+//   @media screen and (max-width: 767px) {
+//     display: none;
+//   }
+// }
 
-.header-list {
+// .header-list {
+//   display: flex;
+//   gap: 27px;
+//   justify-content: center;
+// }
+
+// .header-link {
+//   display: block;
+//   padding: 17px 0 13px;
+// }
+
+.header-test-content-wrapper {
   display: flex;
-  gap: 27px;
-  justify-content: center;
-}
-
-.header-link {
-  display: block;
-  padding: 17px 0 13px;
-}
-
-.header-wrap {
-  display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 7px;
 }
+
+.header-results-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .header-text {
   font-family: 'Yeseva One';
   font-weight: 400;
@@ -65,4 +72,10 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffc700;
+}
+
+.header-text-results {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
 }

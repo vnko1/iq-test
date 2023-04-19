@@ -1,5 +1,5 @@
 import { menuEl, headerEl, routes } from './constants';
-import { headerTest } from './views/headerTest.js';
+import header from './views/header.js';
 
 let testBtn = null;
 
@@ -7,8 +7,18 @@ export function router() {
   const view = routes[location.pathname];
   const hashView = routes[location.hash];
 
-  if (location.pathname.includes('test')) {
-    headerEl.innerHTML = headerTest();
+  if (getPage() === 12) {
+    setTimeout(() => {
+      history.pushState('', '', `${location.origin}/results`);
+      router();
+    }, 3000);
+  }
+
+  if (
+    location.pathname.includes('test') ||
+    location.pathname.includes('results')
+  ) {
+    headerEl.innerHTML = header();
   } else {
     headerEl.innerHTML = '';
   }

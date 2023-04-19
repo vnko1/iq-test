@@ -1,0 +1,102 @@
+.results-container {
+  padding-top: 36px;
+  padding-bottom: 140px;
+  background-image: url('/src/media/results-ll.png'),
+    url('/src/media/results-lr.png'), url('/src/media/stars.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 323px, right 323px, top;
+}
+
+.results-top-text {
+  margin-bottom: 8px;
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.results-underTop-text {
+  margin-bottom: 22px;
+  font-family: 'PT Serif';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+
+  color: #ffffff;
+
+  & > span {
+    text-decoration-line: underline;
+  }
+}
+
+.results-middle-text {
+  margin-bottom: 12px;
+  font-family: 'PT Serif';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3bde7c;
+}
+
+.results-underMiddle-text {
+  background-color: #1c2741;
+  border-radius: 6px;
+  padding: 15px 12px 11px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+.results-bottom-text {
+  margin-bottom: 8px;
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #3bde7c;
+  & > span {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.results-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  width: 290px;
+  height: 92px;
+  padding-left: 15px;
+  background-color: #eb1b00;
+  border-radius: 5px;
+}
+.results-link-icon {
+}
+.results-link-text {
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.response-container {
+}
