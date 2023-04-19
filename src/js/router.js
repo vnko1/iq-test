@@ -24,6 +24,7 @@ function router() {
 
     if (hashView?.title === 'details') {
       menuEl.classList.remove('is-open');
+
       app.insertAdjacentHTML('beforeend', hashView.render());
       return;
     }
