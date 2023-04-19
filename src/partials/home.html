@@ -2,24 +2,22 @@
   <div class="container test-container">
     <div class="progress-bar-container">
       <div class="progress">
-        <div class="bar"></div>
+        <div style="width: 20%" class="bar"></div>
       </div>
     </div>
-    <!-- <form class="test-form">
-      <p>Choose a color:</p>
-      <label>
-        <input type="radio" name="color" value="red" />
-        Red
-      </label>
-      <label>
-        <input type="radio" name="color" value="white" checked />
-        White
-      </label>
-      <label>
-        <input type="radio" name="color" value="green" />
-        Green
-      </label>
-    </form> -->
-
+    <div class="form-container">
+      <form class="test-form form">
+        <p class="form-text">Ваш пол:</p>
+        <label class="form-label">
+          <input type="radio" name="sex" value="man" class="form-input" />
+          <span class="form-label-text">Мужчина</span>
+        </label>
+        <label class="form-label">
+          <input type="radio" name="sex" value="woman" class="form-input" />
+          <span class="form-label-text">Женщина</span>
+        </label>
+        <button type="submit" class="test-button page1-btn">далее</button>
+      </form>
+    </div>
   </div>
 </section>
