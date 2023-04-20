@@ -20,7 +20,7 @@ export function router() {
   }
 
   if (
-    // location.pathname.includes('test') ||
+    location.pathname.includes('test') ||
     location.pathname.includes('results')
   ) {
     headerEl.innerHTML = header();
@@ -145,7 +145,7 @@ function onHandleChange(e) {
 
 function onHandleClick() {
   const page = getPage(location.pathname);
-  // history.pushState('', '', `${location.origin}/test/${page + 1}`);
+  history.pushState('', '', `${location.origin}/test/${page + 1}`);
   router();
 }
 
