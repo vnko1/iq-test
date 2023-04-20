@@ -3,121 +3,11 @@ import p8Url from '/src/media/p8-image.jpg';
 import p10Url from '/src/media/p10-image.jpg';
 import p11Url from '/src/media/p11-image.jpg';
 
-// const arrOfMark1 = [
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-// ];
-
-// const arrOfMark2 = [
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-//   `<label class="form-label-box">
-//             <input type="radio" name="color" value="color" class="form-input-box" />
-//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-//           </label>`,
-// ];
-
-export default tests = page => {
-  const width = 8 * page;
-  if (page === 12) width = 100;
-
-  switch (page) {
-    case 1:
-      return page1(width);
-    case 2:
-      return page2(width);
-    case 3:
-      return page3(width);
-    case 4:
-      return page4(width);
-    case 5:
-      return page5(width);
-    case 6:
-      return page6(width);
-    case 7:
-      return page7(width);
-    case 8:
-      return page8(width);
-    case 9:
-      return page9(width);
-    case 10:
-      return page10(width);
-    case 11:
-      return page11(width);
-    case 12:
-      return loader(width);
-  }
-};
-
-function loader(width) {
+export function loader() {
   return `<div class="container test-container loader-container">
     <div class="progress-bar-container">
       <div class="progress">
-        <div style="width: ${width}%" class="bar"></div>
+        <div style="width: 100%" class="bar"></div>
       </div>
     </div>
     <p class='loader-top-text'>Обработка результатов</p>
@@ -131,7 +21,8 @@ function loader(width) {
     </div>`;
 }
 
-function page1(width) {
+export function page1(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
@@ -157,7 +48,8 @@ function page1(width) {
 </section>`;
 }
 
-function page2(width) {
+export function page2(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
@@ -191,7 +83,8 @@ function page2(width) {
 </section>`;
 }
 
-function page3(width) {
+export function page3(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
@@ -229,7 +122,8 @@ function page3(width) {
 </section>`;
 }
 
-function page4(width) {
+export function page4(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
@@ -272,7 +166,8 @@ function page4(width) {
 </section>`;
 }
 
-function page5(width) {
+export function page5(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
@@ -329,7 +224,8 @@ function page5(width) {
 </section>`;
 }
 
-function page6(width) {
+export function page6(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
@@ -386,7 +282,8 @@ function page6(width) {
 </section>`;
 }
 
-function page7(width) {
+export function page7(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
@@ -428,7 +325,8 @@ function page7(width) {
 </section>`;
 }
 
-function page8(width) {
+export function page8(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
@@ -488,7 +386,8 @@ function page8(width) {
 </section>`;
 }
 
-function page9(width) {
+export function page9(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
@@ -518,7 +417,8 @@ function page9(width) {
 </section>`;
 }
 
-function page10(width) {
+export function page10(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
@@ -551,7 +451,8 @@ function page10(width) {
 </section>`;
 }
 
-function page11(width) {
+export function page11(page) {
+  const width = 8 * page;
   return `<section class="test">
   <div class="container test-container">
     <div class="progress-bar-container">
