@@ -1,5 +1,5 @@
-import home from './views/home.js';
-import details from './views/details.js';
+import home from './views/home';
+import details from './views/details';
 import {
   loader,
   page1,
@@ -13,8 +13,8 @@ import {
   page9,
   page10,
   page11,
-} from './views/tests.js';
-import results from './views/results.js';
+} from './views/tests';
+import results from './views/results';
 
 const menuEl = document.querySelector('.menu-container');
 const headerEl = document.getElementById('header-container');

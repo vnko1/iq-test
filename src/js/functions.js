@@ -1,5 +1,5 @@
 import { menuEl, headerEl, routes } from './constants';
-import header from './views/header.js';
+import header from './views/header';
 
 let responseEl = null;
 let linkEl = null;
