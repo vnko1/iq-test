@@ -13,7 +13,7 @@ import {
   page9,
   page10,
   page11,
-} from './views/tests';
+} from './views/tests.js';
 import results from './views/results';
 
 const menuEl = document.querySelector('.menu-container');
