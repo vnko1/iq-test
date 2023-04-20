@@ -31,6 +31,7 @@ export function router() {
   if (view || hashView) {
     renderPage(view);
     if (hashView) renderDetails(hashView);
+    if (location.hash.includes('data')) getData();
   } else {
     renderHomePage();
   }
@@ -89,7 +90,12 @@ function renderPage(view) {
   }
 }
 
-async function onFetchClick(e) {
+function onFetchClick() {
+  history.pushState('', '', '#data');
+  getData();
+}
+
+async function getData() {
   try {
     loaderWrapper.classList.add('show');
     const results = await fetchData('https://swapi.dev/api/people/1/');
