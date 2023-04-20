@@ -1,6 +1,6 @@
 import home from './views/home.js';
 import details from './views/details.js';
-import tests from './views/tests.js';
+// import tests from './views/tests.js';
 import results from './views/results.js';
 
 const menuEl = document.querySelector('.menu-container');
