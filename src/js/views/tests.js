@@ -142,11 +142,11 @@ function page1(width) {
       <form class="test-form form">
         <p class="form-text">Ваш пол:</p>
         <label class="form-label">
-          <input type="radio" name="sex" value="man" class="form-input" />
+          <input type="radio" name="gender" value="man" class="form-input" />
           <span class="form-label-text">Мужчина</span>
         </label>
         <label class="form-label">
-          <input type="radio" name="sex" value="woman" class="form-input" />
+          <input type="radio" name="gender" value="woman" class="form-input" />
           <span class="form-label-text">Женщина</span>
         </label>
       </form>

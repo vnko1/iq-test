@@ -16,13 +16,13 @@ export default () => {
     </p>
     <p class="results-bottom-text">
       Звоните скорее, запись доступна всего
-      <span data-minutes>10</span>:<span data-seconds>00</span> минут
+      <span data-minutes>10</span><span>:</span><span data-seconds>00</span> минут
     </p>
-    <a class="results-link" href="tel:+14251234563"
+    <button type='button' class="results-btn"
       ><img src="${svgUrl}" alt="call" width="30" height="30" /><span
         class="results-link-text"
         >Позвонить и прослушать результат
-      </span></a
+      </span></button
     >
     <div class="response-container"></div>
   </div>

@@ -1,0 +1,33 @@
+.response-container {
+  margin-top: 20px;
+
+  overflow: hidden;
+  &.is-shown .response-style-container {
+    transform: translateX(0);
+  }
+}
+
+.response-style-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transform: translateX(-100%);
+  transition: transform 500ms linear;
+}
+
+.response-text {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  & > span {
+    color: #3bde7c;
+  }
+}

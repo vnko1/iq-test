@@ -1,7 +1,11 @@
 import { menuEl, headerEl, routes } from './constants';
 import header from './views/header.js';
 
+let responseEl = null;
+let linkEl = null;
 let testBtn = null;
+let timerInterval = null;
+let finishTime = null;
 
 export function router() {
   const view = routes[location.pathname];
@@ -64,7 +68,14 @@ function renderPage(view) {
   app.innerHTML = view.render(page);
   const formEl = document.querySelector('.form');
   testBtn = document.querySelector('.test-button');
-  setTimer();
+  linkEl = document.querySelector('.results-btn');
+  responseEl = document.querySelector('.response-container');
+
+  if (location.pathname.includes('results')) {
+    startTimer();
+    linkEl.addEventListener('click', onFetchClick);
+  }
+
   if (formEl) {
     formEl.addEventListener('change', onHandleChange);
   }
@@ -74,10 +85,38 @@ function renderPage(view) {
   }
 }
 
-function setTimer() {
-  const minutesOutput = document.querySelector('[data-minutes]');
-  const secondsOutput = document.querySelector('[data-deconds]');
-  console.log(minutesOutput);
+async function onFetchClick(e) {
+  try {
+    const results = await fetchData('https://swapi.dev/api/people/1/');
+    renderFetchData(results);
+    setTimeout(() => responseEl.classList.add('is-shown'), 4);
+    linkEl.disabled = true;
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+async function fetchData(url) {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(response.status);
+  }
+  return response.json();
+}
+
+function renderFetchData(data) {
+  const mark = `<div class="response-container">
+ <div class='response-style-container'><p class="response-text">Имя: <span>${data.name}</span></p>
+  <p class="response-text">Дата рождения: <span>${data.birth_year}</span></p>
+  <p class="response-text">Цвет глаз: <span>${data.eye_color}</span></p>
+  <p class="response-text">Цвет волос: <span>${data.hair_color}</span></p>
+  <p class="response-text">Пол: <span>${data.gender}</span></p>
+  <p class="response-text">Вес: <span>${data.mass}</span></p>
+  <p class="response-text">Рост: <span>${data.height}</span></p></div>
+</div>`;
+
+  responseEl.innerHTML = mark;
 }
 
 function renderHomePage() {
@@ -105,4 +144,54 @@ export function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
+}
+
+function startTimer() {
+  finishTime = Date.now() + 600000;
+  setTimer();
+  timerInterval = setInterval(setTimer, 1000);
+}
+
+function setTimer() {
+  const currentTime = Date.now();
+  const deltaTime = finishTime - currentTime;
+
+  if (deltaTime < 1000) {
+    outputTimerValue(convertMs(deltaTime));
+    clearInterval(timerInterval);
+    return;
+  }
+
+  if (!location.pathname.includes('results')) {
+    clearInterval(timerInterval);
+    return;
+  }
+
+  outputTimerValue(convertMs(deltaTime));
+}
+
+function outputTimerValue({ minutes, seconds }) {
+  const minutesOutput = document.querySelector('[data-minutes]');
+  const secondsOutput = document.querySelector('[data-seconds]');
+
+  minutesOutput.textContent = minutes;
+  secondsOutput.textContent = seconds;
+}
+
+function convertMs(ms) {
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+
+  const minutes = addLeadingZero(Math.floor(((ms % day) % hour) / minute));
+  const seconds = addLeadingZero(
+    Math.floor((((ms % day) % hour) % minute) / second)
+  );
+
+  return { minutes, seconds };
+}
+
+function addLeadingZero(value) {
+  return String(value).padStart(2, '0');
 }
