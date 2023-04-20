@@ -51,8 +51,10 @@ function renderDetails(view) {
   const arrowEl = document.querySelector('.arrow-container');
   const detailsEl = document.querySelector('.details-container');
 
-  setTimeout(() => arrowEl.classList.add('rotate'), 0);
-  setTimeout(() => detailsEl.classList.add('animate'), 0);
+  setTimeout(() => {
+    arrowEl.classList.add('rotate');
+    detailsEl.classList.add('animate');
+  }, 0);
 }
 
 function renderPage(view) {
@@ -62,7 +64,7 @@ function renderPage(view) {
   app.innerHTML = view.render(page);
   const formEl = document.querySelector('.form');
   testBtn = document.querySelector('.test-button');
-
+  setTimer();
   if (formEl) {
     formEl.addEventListener('change', onHandleChange);
   }
@@ -70,6 +72,12 @@ function renderPage(view) {
   if (testBtn) {
     testBtn.addEventListener('click', onHandleClick);
   }
+}
+
+function setTimer() {
+  const minutesOutput = document.querySelector('[data-minutes]');
+  const secondsOutput = document.querySelector('[data-deconds]');
+  console.log(minutesOutput);
 }
 
 function renderHomePage() {
