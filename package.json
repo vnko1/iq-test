@@ -5,7 +5,9 @@
   "homepage": "https://vnko1.github.io/iq-test",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /iq-test/"
+    "build": "parcel build src/*.html --public-url /iq-test/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "gh-pages": "^5.0.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"
