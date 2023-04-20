@@ -41,6 +41,7 @@ import p11Url from '/src/media/p11-image.jpg';
 //             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
 //           </label>`,
 // ];
+
 // const arrOfMark2 = [
 //   `<label class="form-label-box">
 //             <input type="radio" name="color" value="color" class="form-input-box" />
@@ -81,7 +82,7 @@ import p11Url from '/src/media/p11-image.jpg';
 // ];
 
 export default tests = page => {
-  let width = 8 * page;
+  const width = 8 * page;
   if (page === 12) width = 100;
 
   switch (page) {
@@ -284,7 +285,42 @@ function page5(width) {
         <p class="form-text">
           Выберите цвет, который </br> сейчас наиболее Вам </br> приятен:
         </p>
-        <div class="input-wrapper">${arrOfMark1.join('')}
+        <div class="input-wrapper"><label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
         </div>
       </form>
     </div>
@@ -306,7 +342,42 @@ function page6(width) {
         <p class="form-text">
           Отдохните пару секунд, еще </br> раз Выберите цвет, который </br> сейчас наиболее Вам </br> приятен:
         </p>
-        <div class="input-wrapper">${arrOfMark2.join('')}
+        <div class="input-wrapper"><label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
+  <label class="form-label-box">
+            <input type="radio" name="color" value="color" class="form-input-box" />
+            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+          </label>
         </div>
       </form>
     </div>
