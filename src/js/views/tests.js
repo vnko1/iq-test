@@ -3,82 +3,82 @@ import p8Url from '/src/media/p8-image.jpg';
 import p10Url from '/src/media/p10-image.jpg';
 import p11Url from '/src/media/p11-image.jpg';
 
-const arrOfMark1 = [
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-];
-const arrOfMark2 = [
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-  `<label class="form-label-box">
-            <input type="radio" name="color" value="color" class="form-input-box" />
-            <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
-          </label>`,
-];
+// const arrOfMark1 = [
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+// ];
+// const arrOfMark2 = [
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+//   `<label class="form-label-box">
+//             <input type="radio" name="color" value="color" class="form-input-box" />
+//             <span class="form-box" style="background-color: ${getRandomHexColor()}"></span>
+//           </label>`,
+// ];
 
 export default tests = page => {
   let width = 8 * page;
@@ -87,28 +87,28 @@ export default tests = page => {
   switch (page) {
     case 1:
       return page1(width);
-    case 2:
-      return page2(width);
-    case 3:
-      return page3(width);
-    case 4:
-      return page4(width);
-    case 5:
-      return page5(width);
-    case 6:
-      return page6(width);
-    case 7:
-      return page7(width);
-    case 8:
-      return page8(width);
-    case 9:
-      return page9(width);
-    case 10:
-      return page10(width);
-    case 11:
-      return page11(width);
-    case 12:
-      return loader(width);
+    // case 2:
+    //   return page2(width);
+    // case 3:
+    //   return page3(width);
+    // case 4:
+    //   return page4(width);
+    // case 5:
+    //   return page5(width);
+    // case 6:
+    //   return page6(width);
+    // case 7:
+    //   return page7(width);
+    // case 8:
+    //   return page8(width);
+    // case 9:
+    //   return page9(width);
+    // case 10:
+    //   return page10(width);
+    // case 11:
+    //   return page11(width);
+    // case 12:
+    //   return loader(width);
   }
 };
 
