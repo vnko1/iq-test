@@ -89,26 +89,26 @@ export default tests = page => {
       return page1(width);
     case 2:
       return page2(width);
-    case 3:
-      return page3(width);
-    case 4:
-      return page4(width);
-    case 5:
-      return page5(width);
-    case 6:
-      return page6(width);
-    case 7:
-      return page7(width);
-    case 8:
-      return page8(width);
-    case 9:
-      return page9(width);
-    case 10:
-      return page10(width);
-    case 11:
-      return page11(width);
-    case 12:
-      return loader(width);
+    // case 3:
+    //   return page3(width);
+    // case 4:
+    //   return page4(width);
+    // case 5:
+    //   return page5(width);
+    // case 6:
+    //   return page6(width);
+    // case 7:
+    //   return page7(width);
+    // case 8:
+    //   return page8(width);
+    // case 9:
+    //   return page9(width);
+    // case 10:
+    //   return page10(width);
+    // case 11:
+    //   return page11(width);
+    // case 12:
+    //   return loader(width);
   }
 };
 
