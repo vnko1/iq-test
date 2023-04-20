@@ -6,6 +6,7 @@ let linkEl = null;
 let testBtn = null;
 let timerInterval = null;
 let finishTime = null;
+let loaderWrapper = null;
 
 export function router() {
   const view = routes[location.pathname];
@@ -72,6 +73,7 @@ function renderPage(view) {
   testBtn = document.querySelector('.test-button');
   linkEl = document.querySelector('.results-btn');
   responseEl = document.querySelector('.response-container');
+  loaderWrapper = document.querySelector('.loader-results-wrapper');
 
   if (location.pathname.includes('results')) {
     startTimer();
@@ -89,13 +91,16 @@ function renderPage(view) {
 
 async function onFetchClick(e) {
   try {
+    loaderWrapper.classList.add('show');
     const results = await fetchData('https://swapi.dev/api/people/1/');
     renderFetchData(results);
     setTimeout(() => responseEl.classList.add('is-shown'), 4);
     linkEl.disabled = true;
   } catch (e) {
     console.log(e);
+    loaderWrapper.classList.remove('show');
   }
+  loaderWrapper.classList.remove('show');
 }
 
 async function fetchData(url) {

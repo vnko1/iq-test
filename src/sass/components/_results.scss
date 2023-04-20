@@ -1,5 +1,8 @@
-.results-container {
+.results {
   position: relative;
+}
+
+.results-container {
   padding-top: 36px;
 
   background-image: url('/src/media/results-ll.png'),
@@ -125,4 +128,27 @@
   text-transform: uppercase;
 
   color: rgba(255, 255, 255, 0.5);
+}
+
+.loader-results-wrapper {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  transform: translate(-50%, -50%);
+  &.show {
+    display: block;
+  }
+}
+
+.loader-results-image {
+  animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
