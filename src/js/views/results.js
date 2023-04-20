@@ -25,6 +25,7 @@ export default () => {
       </span></button
     >
     <div class="response-container"></div>
+    <p class='footer-text'>TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,</p>
   </div>
 </section>`;
 };

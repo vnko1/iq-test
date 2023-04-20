@@ -1,6 +1,7 @@
 .results-container {
+  position: relative;
   padding-top: 36px;
-  padding-bottom: 140px;
+
   background-image: url('/src/media/results-ll.png'),
     url('/src/media/results-lr.png'), url('/src/media/stars.jpg');
   background-repeat: no-repeat;
@@ -107,4 +108,21 @@
   line-height: 18px;
   letter-spacing: 0.05em;
   color: #ffffff;
+}
+
+.footer-text {
+  margin: 140px auto 0;
+  overflow: scroll;
+  max-width: 294px;
+  max-height: 18px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 7px;
+  line-height: 9px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.5);
 }
