@@ -45,6 +45,7 @@ export function globalListener(e) {
     e.preventDefault();
     if (!location.hash) history.pushState('', '', '#details');
     else history.pushState('', '', '/');
+
     router();
   }
 }
@@ -52,6 +53,7 @@ export function globalListener(e) {
 function renderDetails(view) {
   menuEl.classList.remove('is-open');
   app.insertAdjacentHTML('beforeend', view.render());
+
   const arrowEl = document.querySelector('.arrow-container');
   const detailsEl = document.querySelector('.details-container');
 
