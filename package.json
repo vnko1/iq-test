@@ -2,7 +2,7 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://vnko1.github.io/iq-test",
+  "homepage": "https://chipper-tanuki-af1a57.netlify.app/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /iq-test/"
